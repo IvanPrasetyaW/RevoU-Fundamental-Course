@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Miiro Travel Agent</title>
+        <link rel="stylesheet" href="css/index.css">
+
+    </head>
+    <body>
+        <header>
+            <navbar class="container">
+                <div class="navbar">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <img class="logo" src="image/logo.png">
+                    <div>
+                        <a href="#home"><input class="button" type=button value="Home"></a>
+                        <a href="#package"><input class="button" type=button value="Our Package"></a>
+                        <a href="#contact"><input class="button" type=button value="Call Us"></a>
+                    </div>
+                </div>
+            </navbar>
+
+            <hr class="header-footer">
+
+        </header>
+        <main>
+            <section id="home">
+                <div class="container">
+                    <div class="home-title">
+                        <h1>Miiro, Your Trusted Travel Agent</h1>
+                        <h5>Your happiness is in our travel plans</h5>
+                    </div>
+                </div>
+            </section>
+            <section id="about-client">
+                 <div class="container">
+
+                    <div class="about-client">
+                        <div class="about">
+
+                            <div class="about-auto">
+                                <img class="auto-slider" src="image/bali2.jpg" height="100%" width="100%">
+                                <img class="auto-slider" src="image/japan2.jpg" height="100%" width="100%">
+                                <img class="auto-slider" src="image/singapore2.jpg" height="100%" width="100%">
+                            
+                                <div class="button-auto">
+                                    <button onclick="plusDivs(-1)">Previous</button>
+                                    <button onclick="plusDivs(1)">Next</button>
+                                </div>
+                            </div>
+
+                            <script>
+                                var autoslide = 1;
+                                showDivs(autoslide)
+
+                                function plusDivs(n) {
+                                    showDivs(autoslide += n);
+                                }
+
+                                function showDivs(n) {
+                                    var i;
+                                    var imglist = document.getElementsByClassName("auto-slider");
+                                    if (n > imglist.length) autoslide = 1;
+                                    else if (n < 1) autoslide = imglist.length;
+
+                                    for(i = 0; i < imglist.length; i++) {
+                                        imglist[i].style.display = "none";
+                                    }
+
+                                    imglist[autoslide - 1].style.display = "flex";
+                                }
+                            </script>
+
+                            <div class="about-description">
+                                <div class="description-caption">
+                                    <h4>"A truly wonderful escape mechanism experience i ever had"</h4>
+                                </div>
+                                <div class="description-person">
+                                    <img src="image/person.png" height="35px" width="35px">
+                                    <div class="person-info">
+                                        <h5>Sean Bankmon Fraud</h5>
+                                        <h6>Software engineer on the run, 25</h6>
+                                    </div>
+                                </div>
+                            </div> 
+                            <hr class="border-small-top">
+
+                            <div class="about-benefit">
+                                <h6 class="benefit-title">We offer you an advance type of benefit you will never find elsewhere</h6>
+                                <ul class="benefit-list">
+                                    <li>
+                                        <div class="list-number">1</div>
+                                        <p class="list-description">Best travel experience with everything you need will be fulfilled. From tickets, accomodations, and some bonus to keep you happy on the trip</p>
+                                    </li>
+                                    <li>
+                                        <div class="list-number">2</div>
+                                        <p class="list-description">We offer a partial discount for every continous purchase of our packages, think of them as milestones to keep your traveling book filled with great journey</p>
+                                    </li>
+                                    <li>
+                                        <div class="list-number">3</div>
+                                        <p class="list-description">An affordable price, unlimited access to every region we can reach, and also we are preparing for space exploration soon, keep in touch, yeah!</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="client">
+                            <div class="contact-box">
+                                <div class="box-title">
+                                    <h5>Contact Us</h5>
+                                    <p>Our sales will contact you in 24 hours after we receive and confirm your data</p>
+                                </div>
+                                <form name="contact-form" onsubmit="return validateform()">
+                                    <div class="input">
+                                        <label for="">Your Name:</label>
+                                        <input class="type-box" placeholder="  First and last name" type="text" name="full-name">
+                                    </div>
+                                    <div class="input">
+                                        <label for="">Email Address:</label>
+                                        <input class="type-box" placeholder="  example@email.com" type="text" name="email">  
+                                    </div>
+                                    <div class="input">
+                                        <label for="">What are you interested in?</label>
+                                        <select class="input-example" name="" id="option">
+                                            <option class="placeholder" value="" selected hidden>-- Select option --</option>
+                                            <option value="leisure">Leisure Vacation</option>
+                                            <option value="tight">Fullday Traveling</option>
+                                            <option value="allaround">Bit-by-Bit Trip</option>
+                                        </select>
+                                        <br>
+                                    <input class="submit-button" type="submit" value="SEND">
+                                    </div>
+                                </form>
+
+                                <script>
+                                    function validateform() {
+                                        var name = document.forms['contact-form']['full-name'].value;
+                                        var email = document.forms['contact-form']['email'].value;
+                                        var selecttext = document.getElementById("option").value;
+
+                                        if(name == "") {
+                                            alert("Please enter your name");
+                                            return false;
+                                        }
+
+                                        if(email == "") {
+                                            alert("Please enter your email address");
+                                            return false;
+                                        }
+
+                                        if(selecttext == "") {
+                                            alert("Please select your interest");
+                                            return false;
+                                        }
+
+                                        if(name, email = type = "text") {
+                                            alert("Data has been saved succesfully");
+                                            return false;
+                                        }
+
+                                        console.log({name, email, selecttext});
+
+                                        return false;
+                                    }
+                                </script>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <section id="package">
+                <div class="container">
+                    <div class="package-title">
+                        <h2>Our Package</h2>
+                    </div>
+                    <div class="package-list">
+                        <div class="list-destination">
+                            <div class="list-picture">
+                                <img src="image/bali1.jpg" height="60px" width="85px">
+                            </div>
+                            <div class="list-description">
+                                <div class="list-description-title">
+                                    <h4>Bali</h4>
+                                </div>
+                                <p>Travel to paradise island with our great journey guide, you can even find a running monkey on the road</p>
+                            </div>
+                        </div>
+                        <div class="list-destination">
+                            <div class="list-picture">
+                                <img src="image/japan1.jpg" height="60px" width="85px">
+                            </div>
+                            <div class="list-description">
+                                <div class="list-description-title">
+                                    <h4>Japan</h4>
+                                </div>
+                                <p>Mark the land of the sun in your very eyes with our guide and travel plans, but remember don't burn them</p>
+                            </div>
+                        </div>
+                        <div class="list-destination">
+                            <div class="list-picture">
+                                <img src="image/singapore1.jpg" height="60px" width="85px">
+                            </div>
+                            <div class="list-description">
+                                <div class="list-description-title">
+                                    <h4>Singapore</h4>
+                                </div>
+                                <p>Love to see the great lion mermaid? We even provide a full security-insurance for you if you decided to make a new fountain on its side</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="border-small">
+                    <div class="package-list">
+                        <div class="list-destination">
+                            <div class="list-picture">
+                                <img src="image/ukraine1.jpg" height="60px" width="85px">
+                            </div>
+                            <div class="list-description">
+                                <div class="list-description-title">
+                                    <h4>Ukraine</h4>
+                                </div>
+                                <p>Ever wonder how the battlefield feels? We can transport you on site for an affordable price</p>
+                            </div>
+                        </div>
+                        <div class="list-destination">
+                            <div class="list-picture-china">
+                                <img src="image/china1.jpg" height="60px" width="85px">
+                            </div>
+                            <div class="list-description">
+                                <div class="list-description-title">
+                                    <h4>China</h4>
+                                </div>
+                                <p>We will provide the best great wall walking experience you ever got in your life with ease, just need some rail and cart</p>
+                            </div>
+                        </div>
+                        <div class="list-destination">
+                            <div class="list-picture">
+                                <img src="image/world1.jpg" height="60px" width="85px">
+                            </div>
+                            <div class="list-description">
+                                <div class="list-description-title">
+                                    <h4>Combo</h4>
+                                </div>
+                                <p>Every one of our packages will be combined in this beautiful and also frightful package, you will engrave them hard in your memories</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            
+            </section>
+            <hr class="header-footer">
+            <section id="contact">
+                <div class="container">
+                    <h1 class="closing">We're Happy to Facilitate Your Needs</h1>
+                    <h5 class="closing-statement">We realize our clients may need further necessity towards their travel plans, and we are happy to hear your thoughts about suggestions for our packages. Feel free to contact us via button below. We hope your travelling will be a pleasureable one.</h5>
+                    <div class="cta">
+                        <a href="#home"><input class="button-cta" type=button value="CALL TO ACTION"></a>
+                    </div>
+                </div>
+            </section>
+            <hr class="header-footer">
+        </main>
+        <footer>
+            <div class="container">
+                <div class="navbar-bottom">
+                    <img class="logo" src="image/logo.png">
+                    <div class="term-policy">
+                        <a class="hlink" href="">Terms of Service</a>
+                        <a class="hlink" href="">Privacy Policy</a>
+                    </div>
+                    <div class="closer">
+                        <h6>2023</h6>
+                        <h6>Miiro</h6>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </footer>
+    </body>
+</html>

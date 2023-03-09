@@ -1,0 +1,419 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Desktop */
+header{
+    width: 100%;    
+}
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+    display: block;
+}
+
+.logo{
+    height: 50px;
+    width: 50px;
+}
+
+.navbar{
+    display: flex;
+    padding: 15px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button{
+    font-size: 17px;
+    padding: 10px;
+    margin: 5px;
+    border-width: 0;
+    border-radius: 6px;
+    background-color: teal;
+    color: white;
+}
+
+.button-cta{
+    font-size: 17px;
+    padding-top: 20px;
+    margin: 5px;
+    border-width: 0;
+    border-radius: 6px;
+    background-color: teal;
+    color: white;
+    padding-bottom: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.cta{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.home-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 37px;
+    row-gap: 30px;
+}
+
+.home-title > h1{
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.home-title > h5{
+    font-size: 20px;
+    color: gray;
+}
+
+.about-client{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.auto-slider{
+    display: flex;
+    height: 90%;
+    width: 90%;
+    margin-left: 20px;
+}
+
+.button-auto{
+    margin-top: 10px;
+    display: flex;
+    margin-left: 20px;
+    gap: 10px;
+}
+
+.about{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.about-description{
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.description-caption{
+    font-size: 20px;
+    font-style: italic;
+    color: gray;
+    margin-bottom: 20px;
+}
+
+.description-person{
+    margin-right: 250px;
+    display: flex;
+    gap: 25px;
+}
+
+.person-info{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.person-info > h5{
+    font-weight: bold;
+}
+
+.person-info > h6{
+    font-size: 80%;
+    color: gray;
+    font-style: italic;
+}
+
+.border-small-top{
+    width: 70px;
+    border: 2px solid lightgrey;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.about-benefit{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-left: 20px;
+}
+
+.benefit-list{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.benefit-title{
+    color: grey;
+    font-size: 18px;
+}
+
+.benefit-list > li{
+    display: flex;
+    color: grey;
+    align-items: center;
+    gap: 35px;
+}
+
+.list-number{
+    background-color: teal;
+    color: white;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.client{
+    width: 40%;
+}
+
+.contact-box{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    gap: 60px;
+    background-color: lightgray;
+    margin-right: 20px;
+}
+
+.box-title > h5{
+    font-weight: bold;
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+.box-title > p{
+    font-size: 18px;
+    color: gray;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.type-box{
+    height: 50px;
+    display: flex;
+    border-radius: 7px;
+    border-color: white;
+}
+
+.input-example{
+    height: 60px;
+    display: flex;
+    border-radius: 7px;
+    border-color: #8080809c;
+}
+
+.submit-button{
+    display: flex;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    background-color: teal;
+    color: white;
+    padding: 20px;
+    font-size: 17px;
+    border-radius: 5px;
+    border-color: white;
+}
+
+.package-title{
+    display: flex;
+    justify-content: center;
+    padding: 70px;
+    background-color: lightgray;
+    margin-top: 60px;
+    margin-bottom: 55px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.package-list{
+    display: flex;
+    gap: 100px;
+    align-items: center;
+    margin-bottom: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.list-destination{
+    display: flex;
+    gap: 17px;
+}
+
+.list-description{
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.list-description-title{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.list-description > p{
+    display: flex;
+    line-height: 23px;
+    color: gray;
+}
+
+.list-picture{
+    background-color: teal;
+    align-items: center;
+    padding: 10px;
+    display: flex;
+    border: solid white;
+    border-radius: 15px;
+}
+
+.list-picture-china{
+    margin-left: 40px;
+    background-color: teal;
+    align-items: center;
+    padding: 10px;
+    display: flex;
+    border: solid white;
+    border-radius: 15px;
+}
+
+.border-small{
+    border: 2px solid lightgray;
+    width: 100px;
+    margin-top: 80px;
+    margin-bottom: 60px;
+}
+
+.header-footer{
+    color: lightgrey;
+}
+
+.closing{
+    justify-content: center;
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 35px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.closing-statement{
+    display: flex;
+    line-height: 30px;
+    color: grey;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.navbar-bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    margin-top: 40px;
+}
+
+.term-policy{
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    color: grey;
+}
+
+.hlink{
+    color: grey;
+    text-decoration: none;
+}
+
+.closer{
+    display: flex;
+    gap: 12px;
+    color: grey;
+}
+
+.placeholder{
+    color: grey;
+}
